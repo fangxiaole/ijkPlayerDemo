@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFailure(okhttp3.Call call, IOException e) {
                 //onSupportCallback.onSupportFailed(flag);
-                Log.e("leleTest", "onFailure");
+                Log.e(TAG, "onFailure");
                 e.printStackTrace();
             }
 
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 try {
                     String body = response.body().string();
                     String subBody = body.substring(body.indexOf("{"), body.indexOf("}") + 1);
-                    Log.e("leleTest", "subBody=" + subBody);
+                    Log.e(TAG, "subBody=" + subBody);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -140,12 +141,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void startRecord(String fileName) {
         boolean isRecord = mVideoView.startRecord(fileName, "ll.mp4");
-        Log.e("leleTest", "isRecord=" + isRecord);
+        if(isRecord){
+            Toast.makeText(this,R.string.start_record,Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this,R.string.start_record_fail,Toast.LENGTH_SHORT).show();
+        }
+        Log.e(TAG, "startRecord isRecord=" + isRecord);
     }
 
     private void stopRecord() {
         boolean isStop = mVideoView.stopRecord();
-        Log.e("leleTest", "isStop=" + isStop);
+        if(isStop){
+            Toast.makeText(this,R.string.stop_record,Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this,R.string.stop_record_fail,Toast.LENGTH_SHORT).show();
+        }
+        Log.e(TAG, "stopRecord isStop=" + isStop);
     }
 
     private File getFolder() {

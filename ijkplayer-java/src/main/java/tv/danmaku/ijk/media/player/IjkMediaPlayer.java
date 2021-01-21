@@ -1284,8 +1284,8 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
     }
 
     public boolean startRecording(final String directPath, final String fileName) {
-        Log.e("leleTest","directPath="+directPath);
-        Log.e("leleTest","fileName="+fileName);
+        Log.e(TAG,"directPath="+directPath);
+        Log.e(TAG,"fileName="+fileName);
         if (TextUtils.isEmpty(directPath)
                 || TextUtils.isEmpty(fileName)) {
             Log.e(TAG, "record path is null");
