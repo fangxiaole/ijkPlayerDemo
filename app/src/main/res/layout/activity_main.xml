@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <tv.danmaku.ijk.media.example.widget.media.IjkVideoView
+        android:id="@+id/ijkvideoview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="@+id/ijkvideoview"
+        app:layout_constraintRight_toRightOf="@+id/ijkvideoview"
+        android:background="@drawable/btn_black_bg"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:text="0KB/s"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <TableLayout
+        android:id="@+id/hud_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="@color/ijk_transparent_dark"
+        android:padding="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bt_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始直播"
+        app:layout_constraintBottom_toTopOf="@+id/bt_start_record"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/bt_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束直播"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_start"
+        app:layout_constraintLeft_toRightOf="@+id/bt_start" />
+
+    <Button
+        android:id="@+id/bt_start_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始录像"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/bt_stop_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束录像"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/bt_start" />
+
+    <Button
+        android:id="@+id/bt_sd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标清"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_start"
+        app:layout_constraintLeft_toRightOf="@+id/bt_stop" />
+
+    <Button
+        android:id="@+id/bt_hd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高清"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_start"
+        app:layout_constraintLeft_toRightOf="@+id/bt_sd" />
+</androidx.constraintlayout.widget.ConstraintLayout>
