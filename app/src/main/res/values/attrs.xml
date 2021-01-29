@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--时间尺控件-->
+    <declare-styleable name="TimeRuleView">
+        <attr name="zjun_bgColor" format="integer" />
+        <!--刻度颜色-->
+        <attr name="zjun_gradationColor" format="integer"/>
+        <!--时间块的高度-->
+        <attr name="trv_partHeight" format="dimension|reference" />
+        <!--时间块的颜色-->
+        <attr name="trv_partColor" format="color|reference" />
+        <!--刻度宽度-->
+        <attr name="trv_gradationWidth" format="dimension|reference" />
+        <!--秒刻度的长度-->
+        <attr name="trv_secondLen" format="dimension|reference" />
+        <!--分刻度的长度-->
+        <attr name="trv_minuteLen" format="dimension|reference" />
+        <!--时刻度的长度-->
+        <attr name="trv_hourLen" format="dimension|reference" />
+        <!--刻度数值颜色-->
+        <attr name="trv_gradationTextColor" format="color|reference" />
+        <!--刻度数值大小-->
+        <attr name="trv_gradationTextSize" format="dimension|reference" />
+        <!--刻度数值与时刻度的距离-->
+        <attr name="trv_gradationTextGap" format="dimension|reference" />
+        <!--当前时间，单位：s-->
+        <attr name="trv_currentTime" format="integer|reference" />
+        <!--中间指针线颜色-->
+        <attr name="zjun_indicatorLineColor" format="integer" />
+        <!--中间指针线宽度-->
+        <attr name="zjun_indicatorLineWidth" format="float"/>
+        <!--中间指针上三角形的边长-->
+        <attr name="trv_indicatorTriangleSideLen" format="dimension|reference" />
+    </declare-styleable>
+</resources>

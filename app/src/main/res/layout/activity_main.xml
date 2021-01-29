@@ -36,7 +36,23 @@
         android:background="@color/ijk_transparent_dark"
         android:padding="8dp"
         tools:ignore="MissingConstraints" />
-
+    <TextView
+        android:id="@+id/tx_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/timeRuleView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <com.example.ijkplayerdemo.TimeRuleView
+        android:id="@+id/timeRuleView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:trv_partHeight="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_start"
+        />
     <Button
         android:id="@+id/bt_start"
         android:layout_width="wrap_content"
@@ -68,6 +84,13 @@
         android:text="结束录像"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/bt_start" />
+    <Button
+        android:id="@+id/bt_playback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回放"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/bt_stop_record" />
 
     <Button
         android:id="@+id/bt_sd"

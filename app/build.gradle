@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.ijkplayerdemo"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -25,6 +25,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    // Butterknife requires Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -41,5 +46,8 @@ dependencies {
     api "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
     api "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpVersion"
     api "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
 }

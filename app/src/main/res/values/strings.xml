@@ -4,4 +4,6 @@
     <string name="start_record_fail">开始录制失败</string>
     <string name="stop_record">停止录制</string>
     <string name="stop_record_fail">停止录制失败</string>
+    <string name="the_day_before">前一天</string>
+    <string name="the_day_after">后一天</string>
 </resources>
